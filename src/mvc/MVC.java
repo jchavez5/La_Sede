@@ -5,7 +5,6 @@
  */
 package mvc;
 
-import vista.Login_Usuarios;
 import controlador.Controlador;
 import vista.login;
 

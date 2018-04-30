@@ -85,6 +85,11 @@ public class Login_Usuarios extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Gadugi", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Iniciar Sesion");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         txtusuario.setBackground(new java.awt.Color(13, 13, 14));
         txtusuario.setFont(new java.awt.Font("Gisha", 0, 18)); // NOI18N
@@ -292,6 +297,10 @@ public class Login_Usuarios extends javax.swing.JFrame {
     private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CerrarActionPerformed
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments
