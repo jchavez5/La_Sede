@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ventanas;
+package vista;
 
 import java.awt.Desktop;
 import java.net.URI;
@@ -44,7 +44,7 @@ public class Login_Usuarios extends javax.swing.JFrame {
      */
     public Login_Usuarios() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -65,12 +65,12 @@ public class Login_Usuarios extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         ints = new javax.swing.JLabel();
         wha = new javax.swing.JLabel();
         pago = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        Cerrar = new javax.swing.JButton();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -128,18 +128,6 @@ public class Login_Usuarios extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imegenes/contraseña.png"))); // NOI18N
 
-        jLabel1.setBackground(new java.awt.Color(28, 144, 146));
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(28, 144, 146));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imegenes/x.png"))); // NOI18N
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
-            }
-        });
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imegenes/ingresar.png"))); // NOI18N
 
         ints.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imegenes/Instagram_48px.png"))); // NOI18N
@@ -167,13 +155,17 @@ public class Login_Usuarios extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Contactanos");
 
+        Cerrar.setText("jButton1");
+        Cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CerrarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -208,14 +200,18 @@ public class Login_Usuarios extends javax.swing.JFrame {
                                     .addComponent(ints)
                                     .addGap(35, 35, 35)
                                     .addComponent(pago))))))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Cerrar)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
+                .addComponent(Cerrar)
+                .addGap(16, 16, 16)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,7 +238,7 @@ public class Login_Usuarios extends javax.swing.JFrame {
                         .addComponent(jLabel9)
                         .addGap(18, 18, 18)
                         .addComponent(wha)))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 410));
@@ -280,22 +276,11 @@ public class Login_Usuarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcontraseñaActionPerformed
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        int dialogButton = JOptionPane.YES_NO_CANCEL_OPTION;
-        int resultado=JOptionPane.showConfirmDialog(null,"Desea salir del login)","EXIT",dialogButton);
-        if (resultado==0) {
-            System.exit(0);
-        }
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel1MouseClicked
-
     private void whaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_whaMouseClicked
-        OpenWha();
         // TODO add your handling code here:
     }//GEN-LAST:event_whaMouseClicked
 
     private void intsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_intsMouseClicked
-            OpenFacebook();
         // TODO add your handling code here:
     }//GEN-LAST:event_intsMouseClicked
 
@@ -303,6 +288,10 @@ public class Login_Usuarios extends javax.swing.JFrame {
             OpenPago();
         // TODO add your handling code here:
     }//GEN-LAST:event_pagoMouseClicked
+
+    private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -340,8 +329,8 @@ public class Login_Usuarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton Cerrar;
     private javax.swing.JLabel ints;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

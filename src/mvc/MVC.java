@@ -3,19 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistemaautomatizacion;
+package mvc;
+
+import vista.Login_Usuarios;
+import controlador.Controlador;
+import vista.login;
 
 /**
  *
  * @author Josechavez
  */
-public class SistemaAutomatizacion {
+public class MVC {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        login view =new login();         
+        Controlador ctrl = new Controlador(view);
+        ctrl.iniciar();
+        view.setVisible(true);
+                
     }
     
 }
