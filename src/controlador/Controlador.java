@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.EventListener;
 import javax.swing.JOptionPane;
+import javax.swing.ScrollPaneConstants;
 import vista.login;
 
 /**
@@ -17,22 +18,26 @@ import vista.login;
  * @author Josechavez
  */
 public class Controlador {
+
     private login view;
-    
-    public Controlador(login view){
-        this.view= view;
-      
+
+    public Controlador() {
     }
-    public void iniciar(){
+
+    public Controlador(login view) {
+        this.view = view;
+    }
+
+    public void iniciar() {
         view.setLocationRelativeTo(null);
     }
- 
-   
-    public static void salir() {
-       int dialogButton = JOptionPane.YES_NO_CANCEL_OPTION;
-        int resultado=JOptionPane.showConfirmDialog(null,"Desea salir del login)","EXIT",dialogButton);
-        if (resultado==0) {
+
+    public void salir() {
+        int dialogButton = JOptionPane.YES_NO_CANCEL_OPTION;
+        int resultado = JOptionPane.showConfirmDialog(null, "Desea salir del login)", "EXIT", dialogButton);
+        if (resultado == 0) {
             System.exit(0);
         }
     }
+
 }

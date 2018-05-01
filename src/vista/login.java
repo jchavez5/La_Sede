@@ -12,12 +12,13 @@ import controlador.Controlador;
  * @author Josechavez
  */
 public class login extends javax.swing.JFrame {
-
+ Controlador c = new Controlador();
     /**
      * Creates new form login
      */
     public login() {
         initComponents();
+     
     }
 
     /**
@@ -37,7 +38,7 @@ public class login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         usuario = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        contraseña = new javax.swing.JPasswordField();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
@@ -72,19 +73,19 @@ public class login extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(cerrar)
-                .addContainerGap())
+                .addGap(18, 18, 18))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(cerrar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(cerrar)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -97,16 +98,40 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, 50));
 
         usuario.setFont(new java.awt.Font("DotumChe", 0, 18)); // NOI18N
-        getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 190, 40));
+        usuario.setForeground(new java.awt.Color(204, 204, 204));
+        usuario.setText("Ingrese un usuario");
+        usuario.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                usuarioFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                usuarioFocusLost(evt);
+            }
+        });
+        getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 190, 50));
 
-        jPasswordField1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jPasswordField1.setText("jPasswordField1");
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 190, 40));
+        contraseña.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        contraseña.setForeground(new java.awt.Color(204, 204, 204));
+        contraseña.setText("oooooooooo");
+        contraseña.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                contraseñaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                contraseñaFocusLost(evt);
+            }
+        });
+        getContentPane().add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 190, 50));
 
         jButton1.setBackground(new java.awt.Color(54, 173, 131));
         jButton1.setFont(new java.awt.Font("Ebrima", 0, 18)); // NOI18N
         jButton1.setText("INGRESAR");
         jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Instagram_64px.png"))); // NOI18N
 
@@ -137,8 +162,36 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
-        Controlador.salir();
+       c.salir();
     }//GEN-LAST:event_cerrarMouseClicked
+
+    private void usuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usuarioFocusGained
+         if (usuario.getText().equals("Ingrese un usuario")){
+             usuario.setText(""); 
+        }
+    }//GEN-LAST:event_usuarioFocusGained
+
+    private void usuarioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usuarioFocusLost
+         if (usuario.getText().equals("")) {
+            usuario.setText("Ingrese un usuario");
+        }
+    }//GEN-LAST:event_usuarioFocusLost
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void contraseñaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_contraseñaFocusGained
+        if (contraseña.getText().equals("oooooooooo")) {
+            contraseña.setText("");            
+        }    
+    }//GEN-LAST:event_contraseñaFocusGained
+
+    private void contraseñaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_contraseñaFocusLost
+            if (contraseña.getText().equals("")) {
+            contraseña.setText("oooooooooo");
+        }       
+    }//GEN-LAST:event_contraseñaFocusLost
 
     /**
      * @param args the command line arguments
@@ -177,6 +230,7 @@ public class login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel cerrar;
+    public javax.swing.JPasswordField contraseña;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -186,7 +240,6 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField usuario;
+    public javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }

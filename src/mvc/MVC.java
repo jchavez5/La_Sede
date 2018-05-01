@@ -22,6 +22,8 @@ public class MVC {
         Controlador ctrl = new Controlador(view);
         ctrl.iniciar();
         view.setVisible(true);
+        
+        
                 
     }
     
