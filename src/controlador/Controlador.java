@@ -5,12 +5,10 @@
  */
 package controlador;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.util.EventListener;
+import java.awt.Color;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.ScrollPaneConstants;
+import javax.swing.JPanel;
 import vista.login;
 
 /**
@@ -33,11 +31,32 @@ public class Controlador {
     }
 
     public void salir() {
-        int dialogButton = JOptionPane.YES_NO_CANCEL_OPTION;
-        int resultado = JOptionPane.showConfirmDialog(null, "Desea salir del login)", "EXIT", dialogButton);
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int resultado = JOptionPane.showConfirmDialog(null, "Desea salir del login?", "EXIT", dialogButton);
         if (resultado == 0) {
             System.exit(0);
         }
     }
+
+    public void cerrar() {
+        System.exit(0);
+
+    }
+    public void setColor(JPanel  pane,JPanel Sdpane,JLabel label){
+        label.setForeground(new Color(255,82,82));
+        pane.setBackground(new Color(207,216,220));
+        Sdpane.setBackground(new Color(255,82,82));
+    } 
+    public void resetColorLabel(JLabel [] label){
+         for (int i = 0; i < label.length; i++) {
+             label[i].setForeground(new Color(255,255,255));
+         }
+    }
+     public void resetColorJPanel(JPanel [] pane){
+         for (int i = 0; i < pane.length; i++) {
+             pane[i].setBackground(new Color(69,90,100));
+         }
+    }
+     
 
 }
