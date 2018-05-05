@@ -6,7 +6,6 @@
 package vista;
 
 import controlador.Controlador;
-import java.beans.PropertyVetoException;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -14,15 +13,14 @@ import javax.swing.JPanel;
  *
  * @author Josechavez
  */
-public class Ventana_Administrador extends javax.swing.JFrame {
+public class Ventana_Empleado extends javax.swing.JFrame {
  Controlador c = new Controlador();
     /**
-     * Creates new form Ventana_Administrador
+     * Creates new form Ventana_Empleado
      */
-    public Ventana_Administrador() {
+    public Ventana_Empleado() {
         initComponents();
-        this.setLocationRelativeTo(null);
-       
+         this.setLocationRelativeTo(null);
     }
 
     /**
@@ -55,10 +53,6 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         lblReporteAdm = new javax.swing.JLabel();
         SdReporteAdm = new javax.swing.JPanel();
-        CrearAdm = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        lblCrearAdm = new javax.swing.JLabel();
-        SdCrearAdm = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         NameTittle = new javax.swing.JLabel();
@@ -66,17 +60,15 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         SalirAdm = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        MostarAdm = new javax.swing.JDesktopPane();
-        jPanel3 = new javax.swing.JPanel();
+        MostarEmpleado = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(207, 216, 220));
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(69, 90, 100));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        InicioAdm.setBackground(new java.awt.Color(207, 216, 220));
+        InicioAdm.setBackground(new java.awt.Color(69, 90, 100));
         InicioAdm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Home_32px.png"))); // NOI18N
@@ -84,7 +76,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
 
         lblInicio.setBackground(new java.awt.Color(255, 255, 255));
         lblInicio.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        lblInicio.setForeground(new java.awt.Color(255, 82, 82));
+        lblInicio.setForeground(new java.awt.Color(255, 255, 255));
         lblInicio.setText("Inicio");
         lblInicio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -93,7 +85,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         });
         InicioAdm.add(lblInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 2, 170, 50));
 
-        SdIniciAdm.setBackground(new java.awt.Color(255, 82, 82));
+        SdIniciAdm.setBackground(new java.awt.Color(69, 90, 100));
 
         javax.swing.GroupLayout SdIniciAdmLayout = new javax.swing.GroupLayout(SdIniciAdm);
         SdIniciAdm.setLayout(SdIniciAdmLayout);
@@ -246,40 +238,6 @@ public class Ventana_Administrador extends javax.swing.JFrame {
 
         jPanel1.add(ReportAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 220, 50));
 
-        CrearAdm.setBackground(new java.awt.Color(69, 90, 100));
-        CrearAdm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Male User_32px.png"))); // NOI18N
-        CrearAdm.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, -1, -1));
-
-        lblCrearAdm.setBackground(new java.awt.Color(204, 204, 204));
-        lblCrearAdm.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        lblCrearAdm.setForeground(new java.awt.Color(255, 255, 255));
-        lblCrearAdm.setText("Crear empleado");
-        lblCrearAdm.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                lblCrearAdmMousePressed(evt);
-            }
-        });
-        CrearAdm.add(lblCrearAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 170, 53));
-
-        SdCrearAdm.setBackground(new java.awt.Color(69, 90, 100));
-
-        javax.swing.GroupLayout SdCrearAdmLayout = new javax.swing.GroupLayout(SdCrearAdm);
-        SdCrearAdm.setLayout(SdCrearAdmLayout);
-        SdCrearAdmLayout.setHorizontalGroup(
-            SdCrearAdmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
-        );
-        SdCrearAdmLayout.setVerticalGroup(
-            SdCrearAdmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        CrearAdm.add(SdCrearAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jPanel1.add(CrearAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 220, 50));
-
         jPanel2.setBackground(new java.awt.Color(117, 117, 117));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Minimize Window_32px.png"))); // NOI18N
@@ -311,14 +269,13 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         jLabel14.setBackground(new java.awt.Color(204, 204, 204));
         jLabel14.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText(" Cerrar Sesión");
-        jLabel14.setToolTipText("");
+        jLabel14.setText("    Cerrar Sesión");
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jLabel14MousePressed(evt);
             }
         });
-        SalirAdm.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 40));
+        SalirAdm.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 40));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -327,61 +284,45 @@ public class Ventana_Administrador extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 299, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
                 .addComponent(NameTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73)
+                .addGap(79, 79, 79)
                 .addComponent(jLabel4)
-                .addGap(203, 203, 203)
+                .addGap(232, 232, 232)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(SalirAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(SalirAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(SalirAdm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4)
                         .addComponent(NameTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel10))
-                    .addComponent(jLabel2))
+                        .addComponent(jLabel10)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(SalirAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 40));
 
-        MostarAdm.setBackground(new java.awt.Color(207, 216, 220));
+        MostarEmpleado.setBackground(new java.awt.Color(207, 216, 220));
 
-        javax.swing.GroupLayout MostarAdmLayout = new javax.swing.GroupLayout(MostarAdm);
-        MostarAdm.setLayout(MostarAdmLayout);
-        MostarAdmLayout.setHorizontalGroup(
-            MostarAdmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout MostarEmpleadoLayout = new javax.swing.GroupLayout(MostarEmpleado);
+        MostarEmpleado.setLayout(MostarEmpleadoLayout);
+        MostarEmpleadoLayout.setHorizontalGroup(
+            MostarEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1080, Short.MAX_VALUE)
         );
-        MostarAdmLayout.setVerticalGroup(
-            MostarAdmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+        MostarEmpleadoLayout.setVerticalGroup(
+            MostarEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 610, Short.MAX_VALUE)
         );
 
-        jPanel1.add(MostarAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 1080, 600));
-
-        jPanel3.setBackground(new java.awt.Color(117, 117, 117));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1300, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 16, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 640, 1300, -1));
+        jPanel1.add(MostarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 1080, 610));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -391,9 +332,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -401,58 +340,50 @@ public class Ventana_Administrador extends javax.swing.JFrame {
 
     private void lblInicioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInicioMousePressed
         c.setColor(InicioAdm,SdIniciAdm,lblInicio);
-        c.resetColorJPanel(new JPanel[]{AlquilerAdm,SdAlquilerAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm,CrearAdm,SdCrearAdm});
-        c.resetColorLabel(new JLabel[]{lblAlquilerAdm1,lblMovimientoAdm,lvlConsultaADm,lblReporteAdm,lblCrearAdm});
+        c.resetColorJPanel(new JPanel[]{AlquilerAdm,SdAlquilerAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm});
+        c.resetColorLabel(new JLabel[]{lblAlquilerAdm1,lblMovimientoAdm,lvlConsultaADm,lblReporteAdm});
     }//GEN-LAST:event_lblInicioMousePressed
 
-    private void NameTittleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NameTittleMousePressed
+    private void lblAlquilerAdm1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAlquilerAdm1MousePressed
         c.setColor(AlquilerAdm,SdAlquilerAdm,lblAlquilerAdm1);
-        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm,CrearAdm,SdCrearAdm});
-        c.resetColorLabel(new JLabel[]{lblInicio,lblMovimientoAdm,lvlConsultaADm,lblReporteAdm,lblCrearAdm});
-    }//GEN-LAST:event_NameTittleMousePressed
+        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm});
+        c.resetColorLabel(new JLabel[]{lblInicio,lblMovimientoAdm,lvlConsultaADm,lblReporteAdm});
+
+    }//GEN-LAST:event_lblAlquilerAdm1MousePressed
+
+    private void lblMovimientoAdmMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMovimientoAdmMousePressed
+        c.setColor(MovimientoAdm,SdMovimientoAdm,lblMovimientoAdm);
+        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,AlquilerAdm,SdAlquilerAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm});
+        c.resetColorLabel(new JLabel[]{lblInicio,lblAlquilerAdm1,lvlConsultaADm,lblReporteAdm});
+    }//GEN-LAST:event_lblMovimientoAdmMousePressed
+
+    private void lvlConsultaADmMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvlConsultaADmMousePressed
+        c.setColor(ConsultaAdm,SdConsultaAdm,lvlConsultaADm);
+        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,AlquilerAdm,SdAlquilerAdm,MovimientoAdm,SdMovimientoAdm,ReportAdm,SdReporteAdm});
+        c.resetColorLabel(new JLabel[]{lblInicio,lblAlquilerAdm1,lblMovimientoAdm,lblReporteAdm});
+
+    }//GEN-LAST:event_lvlConsultaADmMousePressed
+
+    private void lblReporteAdmMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReporteAdmMousePressed
+        c.setColor(ReportAdm,SdReporteAdm,lblReporteAdm);
+        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,AlquilerAdm,SdAlquilerAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm});
+        c.resetColorLabel(new JLabel[]{lblInicio,lblAlquilerAdm1,lblMovimientoAdm,lvlConsultaADm});
+
+    }//GEN-LAST:event_lblReporteAdmMousePressed
 
     private void jLabel14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MousePressed
         c.salir();
     }//GEN-LAST:event_jLabel14MousePressed
 
-    private void lblMovimientoAdmMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMovimientoAdmMousePressed
-        c.setColor(MovimientoAdm,SdMovimientoAdm,lblMovimientoAdm);
-        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,AlquilerAdm,SdAlquilerAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm,CrearAdm,SdCrearAdm});
-        c.resetColorLabel(new JLabel[]{lblInicio,lblAlquilerAdm1,lvlConsultaADm,lblReporteAdm,lblCrearAdm});
-    }//GEN-LAST:event_lblMovimientoAdmMousePressed
-
-    private void lvlConsultaADmMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvlConsultaADmMousePressed
-        c.setColor(ConsultaAdm,SdConsultaAdm,lvlConsultaADm);
-        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,AlquilerAdm,SdAlquilerAdm,MovimientoAdm,SdMovimientoAdm,ReportAdm,SdReporteAdm,CrearAdm,SdCrearAdm});
-        c.resetColorLabel(new JLabel[]{lblInicio,lblAlquilerAdm1,lblMovimientoAdm,lblReporteAdm,lblCrearAdm});
-   
-    }//GEN-LAST:event_lvlConsultaADmMousePressed
-
-    private void lblReporteAdmMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReporteAdmMousePressed
-        c.setColor(ReportAdm,SdReporteAdm,lblReporteAdm);
-        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,AlquilerAdm,SdAlquilerAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,CrearAdm,SdCrearAdm});
-        c.resetColorLabel(new JLabel[]{lblInicio,lblAlquilerAdm1,lblMovimientoAdm,lvlConsultaADm,lblCrearAdm});
-     
-    }//GEN-LAST:event_lblReporteAdmMousePressed
-
-    private void lblCrearAdmMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCrearAdmMousePressed
-        RegistroEmpleado r=new RegistroEmpleado();
-        c.mostrar(MostarAdm, r);
-        c.setColor(CrearAdm,SdCrearAdm,lblCrearAdm);
-        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,AlquilerAdm,SdAlquilerAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm});
-        c.resetColorLabel(new JLabel[]{lblInicio,lblAlquilerAdm1,lblMovimientoAdm,lvlConsultaADm,lblReporteAdm});
-    }//GEN-LAST:event_lblCrearAdmMousePressed
-
     private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
         this.setExtendedState(ICONIFIED);
     }//GEN-LAST:event_jLabel2MousePressed
 
-    private void lblAlquilerAdm1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAlquilerAdm1MousePressed
+    private void NameTittleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NameTittleMousePressed
         c.setColor(AlquilerAdm,SdAlquilerAdm,lblAlquilerAdm1);
-        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,CrearAdm,SdCrearAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm});
-        c.resetColorLabel(new JLabel[]{lblInicio,lblCrearAdm,lblMovimientoAdm,lvlConsultaADm,lblReporteAdm});
-      
-    }//GEN-LAST:event_lblAlquilerAdm1MousePressed
+        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm});
+        c.resetColorLabel(new JLabel[]{lblInicio,lblMovimientoAdm,lvlConsultaADm,lblReporteAdm});
+    }//GEN-LAST:event_NameTittleMousePressed
 
     /**
      * @param args the command line arguments
@@ -471,20 +402,20 @@ public class Ventana_Administrador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Ventana_Administrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventana_Empleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Ventana_Administrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventana_Empleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Ventana_Administrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventana_Empleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Ventana_Administrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventana_Empleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Ventana_Administrador().setVisible(true);
+                new Ventana_Empleado().setVisible(true);
             }
         });
     }
@@ -492,22 +423,19 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AlquilerAdm;
     private javax.swing.JPanel ConsultaAdm;
-    private javax.swing.JPanel CrearAdm;
     private javax.swing.JPanel InicioAdm;
-    private javax.swing.JDesktopPane MostarAdm;
+    private javax.swing.JDesktopPane MostarEmpleado;
     private javax.swing.JPanel MovimientoAdm;
     private javax.swing.JLabel NameTittle;
     private javax.swing.JPanel ReportAdm;
     private javax.swing.JPanel SalirAdm;
     private javax.swing.JPanel SdAlquilerAdm;
     private javax.swing.JPanel SdConsultaAdm;
-    private javax.swing.JPanel SdCrearAdm;
     private javax.swing.JPanel SdIniciAdm;
     private javax.swing.JPanel SdMovimientoAdm;
     private javax.swing.JPanel SdReporteAdm;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -517,9 +445,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lblAlquilerAdm1;
-    private javax.swing.JLabel lblCrearAdm;
     private javax.swing.JLabel lblInicio;
     private javax.swing.JLabel lblMovimientoAdm;
     private javax.swing.JLabel lblReporteAdm;

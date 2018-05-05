@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package controlador;
-
+import vista.RegistroEmpleado;
 import java.awt.Color;
+import java.beans.PropertyVetoException;
+import javax.swing.JDesktopPane;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -58,5 +60,15 @@ public class Controlador {
          }
     }
      
+    
+     
+    public void mostrar (JDesktopPane mostrar,RegistroEmpleado  x){
+        mostrar.add(x);
+        x.show();
+        try {
+        x.setMaximum(true);
+        x.setUI(null);
+        } catch(PropertyVetoException e) { e.printStackTrace(); }   
+    }
 
 }
