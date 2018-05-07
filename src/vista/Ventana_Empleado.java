@@ -79,6 +79,9 @@ public class Ventana_Empleado extends javax.swing.JFrame {
         lblInicio.setForeground(new java.awt.Color(255, 255, 255));
         lblInicio.setText("Inicio");
         lblInicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblInicioMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 lblInicioMousePressed(evt);
             }
@@ -128,6 +131,9 @@ public class Ventana_Empleado extends javax.swing.JFrame {
         lblAlquilerAdm1.setForeground(new java.awt.Color(255, 255, 255));
         lblAlquilerAdm1.setText("Alquilar habitacion");
         lblAlquilerAdm1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAlquilerAdm1MouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 lblAlquilerAdm1MousePressed(evt);
             }
@@ -147,6 +153,9 @@ public class Ventana_Empleado extends javax.swing.JFrame {
         lblMovimientoAdm.setForeground(new java.awt.Color(255, 255, 255));
         lblMovimientoAdm.setText("Movimiento de caja");
         lblMovimientoAdm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblMovimientoAdmMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 lblMovimientoAdmMousePressed(evt);
             }
@@ -181,6 +190,9 @@ public class Ventana_Empleado extends javax.swing.JFrame {
         lvlConsultaADm.setForeground(new java.awt.Color(255, 255, 255));
         lvlConsultaADm.setText("Consultas");
         lvlConsultaADm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lvlConsultaADmMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 lvlConsultaADmMousePressed(evt);
             }
@@ -215,6 +227,9 @@ public class Ventana_Empleado extends javax.swing.JFrame {
         lblReporteAdm.setForeground(new java.awt.Color(255, 255, 255));
         lblReporteAdm.setText("Reportes");
         lblReporteAdm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblReporteAdmMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 lblReporteAdmMousePressed(evt);
             }
@@ -384,6 +399,52 @@ public class Ventana_Empleado extends javax.swing.JFrame {
         c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm});
         c.resetColorLabel(new JLabel[]{lblInicio,lblMovimientoAdm,lvlConsultaADm,lblReporteAdm});
     }//GEN-LAST:event_NameTittleMousePressed
+
+    private void lblInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInicioMouseClicked
+        Inicio i=new Inicio();
+        c.mostrar(MostarEmpleado,i);
+        c.setColor(InicioAdm,SdIniciAdm,lblInicio);
+        c.resetColorJPanel(new JPanel[]{AlquilerAdm,SdAlquilerAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm});
+        c.resetColorLabel(new JLabel[]{lblAlquilerAdm1,lblMovimientoAdm,lvlConsultaADm,lblReporteAdm});
+   
+     
+    }//GEN-LAST:event_lblInicioMouseClicked
+
+    private void lblAlquilerAdm1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAlquilerAdm1MouseClicked
+        AlquilarHabitacion al=new AlquilarHabitacion();
+        c.mostrar(MostarEmpleado,al); 
+        c.setColor(AlquilerAdm,SdAlquilerAdm,lblAlquilerAdm1);
+        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm});
+        c.resetColorLabel(new JLabel[]{lblInicio,lblMovimientoAdm,lvlConsultaADm,lblReporteAdm});
+
+    }//GEN-LAST:event_lblAlquilerAdm1MouseClicked
+
+    private void lblMovimientoAdmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMovimientoAdmMouseClicked
+        MovimientoCaja mo=new MovimientoCaja();
+        c.mostrar(MostarEmpleado,mo);
+        c.setColor(MovimientoAdm,SdMovimientoAdm,lblMovimientoAdm);
+        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,AlquilerAdm,SdAlquilerAdm,ConsultaAdm,SdConsultaAdm,ReportAdm,SdReporteAdm});
+        c.resetColorLabel(new JLabel[]{lblInicio,lblAlquilerAdm1,lvlConsultaADm,lblReporteAdm});
+    
+    }//GEN-LAST:event_lblMovimientoAdmMouseClicked
+
+    private void lvlConsultaADmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvlConsultaADmMouseClicked
+        Consulta co=new Consulta();
+        c.mostrar(MostarEmpleado,co);
+        c.setColor(ConsultaAdm,SdConsultaAdm,lvlConsultaADm);
+        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,AlquilerAdm,SdAlquilerAdm,MovimientoAdm,SdMovimientoAdm,ReportAdm,SdReporteAdm});
+        c.resetColorLabel(new JLabel[]{lblInicio,lblAlquilerAdm1,lblMovimientoAdm,lblReporteAdm});
+
+    }//GEN-LAST:event_lvlConsultaADmMouseClicked
+
+    private void lblReporteAdmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReporteAdmMouseClicked
+        Reporte re=new Reporte();
+        c.mostrar(MostarEmpleado,re);
+        c.setColor(ReportAdm,SdReporteAdm,lblReporteAdm);
+        c.resetColorJPanel(new JPanel[]{InicioAdm,SdIniciAdm,AlquilerAdm,SdAlquilerAdm,MovimientoAdm,SdMovimientoAdm,ConsultaAdm,SdConsultaAdm});
+        c.resetColorLabel(new JLabel[]{lblInicio,lblAlquilerAdm1,lblMovimientoAdm,lvlConsultaADm});
+
+    }//GEN-LAST:event_lblReporteAdmMouseClicked
 
     /**
      * @param args the command line arguments

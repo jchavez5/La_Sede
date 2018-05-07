@@ -87,6 +87,7 @@
                 <Property name="text" type="java.lang.String" value="Inicio"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblInicioMouseClicked"/>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblInicioMousePressed"/>
               </Events>
               <Constraints>
@@ -189,6 +190,7 @@
                 <Property name="text" type="java.lang.String" value="Alquilar habitacion"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblAlquilerAdm1MouseClicked"/>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblAlquilerAdm1MousePressed"/>
               </Events>
               <Constraints>
@@ -241,6 +243,7 @@
                 <Property name="text" type="java.lang.String" value="Movimiento de caja"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblMovimientoAdmMouseClicked"/>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblMovimientoAdmMousePressed"/>
               </Events>
               <Constraints>
@@ -318,6 +321,7 @@
                 <Property name="text" type="java.lang.String" value="Consultas"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lvlConsultaADmMouseClicked"/>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lvlConsultaADmMousePressed"/>
               </Events>
               <Constraints>
@@ -395,6 +399,7 @@
                 <Property name="text" type="java.lang.String" value="Reportes"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblReporteAdmMouseClicked"/>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblReporteAdmMousePressed"/>
               </Events>
               <Constraints>
