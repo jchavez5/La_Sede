@@ -26,7 +26,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     public Ventana_Administrador() {
         initComponents();
         this.setLocationRelativeTo(null);
-        bienvenido.setText(bienvenido.getText()+usuario[1]);
+       // bienvenido.setText(bienvenido.getText()+usuario[1]);
 
     }
 
@@ -95,6 +95,12 @@ public class Ventana_Administrador extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblInicioMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblInicioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblInicioMouseExited(evt);
+            }
         });
         InicioAdm.add(lblInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 2, 170, 50));
 
@@ -143,6 +149,12 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         lblAlquilerAdm1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblAlquilerAdm1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblAlquilerAdm1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblAlquilerAdm1MouseExited(evt);
             }
         });
         AlquilerAdm.add(lblAlquilerAdm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 170, 54));
@@ -433,6 +445,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         c.setColor(InicioAdm, SdIniciAdm, lblInicio);
         c.resetColorJPanel(new JPanel[]{AlquilerAdm, SdAlquilerAdm, MovimientoAdm, SdMovimientoAdm, ConsultaAdm, SdConsultaAdm, ReportAdm, SdReporteAdm, CrearAdm, SdCrearAdm});
         c.resetColorLabel(new JLabel[]{lblAlquilerAdm1, lblMovimientoAdm, lvlConsultaADm, lblReporteAdm, lblCrearAdm});
+        c.activar("inicio");
             
     }//GEN-LAST:event_lblInicioMouseClicked
 
@@ -469,8 +482,27 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         c.setColor(AlquilerAdm, SdAlquilerAdm, lblAlquilerAdm1);
         c.resetColorJPanel(new JPanel[]{InicioAdm, SdIniciAdm, MovimientoAdm, SdMovimientoAdm, ConsultaAdm, SdConsultaAdm, ReportAdm, SdReporteAdm, CrearAdm, SdCrearAdm});
         c.resetColorLabel(new JLabel[]{lblInicio, lblMovimientoAdm, lvlConsultaADm, lblReporteAdm, lblCrearAdm});
-   
+        c.activar("alquiler");
     }//GEN-LAST:event_lblAlquilerAdm1MouseClicked
+
+    private void lblInicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInicioMouseEntered
+        c.setColorMovimiento(InicioAdm, SdIniciAdm, lblInicio);
+    }//GEN-LAST:event_lblInicioMouseEntered
+
+    private void lblInicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInicioMouseExited
+        c.resetColorMovimiento(InicioAdm, SdIniciAdm, lblInicio);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblInicioMouseExited
+
+    private void lblAlquilerAdm1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAlquilerAdm1MouseEntered
+        c.setColorMovimiento(AlquilerAdm,SdAlquilerAdm, lblAlquilerAdm1);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblAlquilerAdm1MouseEntered
+
+    private void lblAlquilerAdm1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAlquilerAdm1MouseExited
+        c.resetColorMovimiento(AlquilerAdm, SdAlquilerAdm, lblAlquilerAdm1);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblAlquilerAdm1MouseExited
 
     /**
      * @param args the command line arguments

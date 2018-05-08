@@ -9,6 +9,7 @@ import vista.RegistroEmpleado;
 import java.awt.Color;
 import java.beans.PropertyVetoException;
 import java.security.cert.Extension;
+import javax.swing.JButton;
 import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
@@ -23,6 +24,8 @@ import vista.login;
 public class Controlador {
 
     private login view;
+    public boolean activo = false;
+    public boolean inicio = false,alquiler=false,movimiento=false;
 
     public Controlador() {
     }
@@ -52,6 +55,8 @@ public class Controlador {
         label.setForeground(new Color(255, 82, 82));
         pane.setBackground(new Color(207, 216, 220));
         Sdpane.setBackground(new Color(255, 82, 82));
+        activo = true;
+
     }
 
     public void resetColorLabel(JLabel[] label) {
@@ -70,8 +75,12 @@ public class Controlador {
         panelPrincipal.setBackground(new Color(69, 90, 100));
     }
 
+    public void efectoQuitarColorSalir(JPanel panelPrincipal) {
+        panelPrincipal.setBackground(new Color(244, 67, 54));
+    }
+
     public void efectoColocarColor(JPanel panelPrincipal) {
-        panelPrincipal.setBackground(new Color(255, 82, 82));
+        panelPrincipal.setBackground(new Color(150, 40, 27));
     }
 
     public void mostrar(JDesktopPane mostrar, JInternalFrame x) {
@@ -83,6 +92,48 @@ public class Controlador {
             x.setUI(null);
         } catch (PropertyVetoException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void efectoColorButton(JButton panelPrincipal) {
+        panelPrincipal.setBackground(new Color(150, 40, 27));
+    }
+
+    public void efectoQuitarColorbotton(JButton panelPrincipal) {
+        panelPrincipal.setBackground(new Color(244, 67, 54));
+    }
+//////////////// movimiento del mouse
+
+    public void setColorMovimiento(JPanel pane, JPanel Sdpane, JLabel label) {
+        if (inicio == false) {
+            label.setForeground(new Color(255, 82, 82));
+            pane.setBackground(new Color(189, 189, 189));
+            Sdpane.setBackground(new Color(189, 189, 189));
+            activo = false;
+        }
+
+    }
+
+    public void resetColorMovimiento(JPanel pane, JPanel Sdpane, JLabel label) {
+        if (activo == false) {
+            label.setForeground(new Color(222, 222, 222));
+            pane.setBackground(new Color(69, 90, 100));
+            Sdpane.setBackground(new Color(69, 90, 100));
+
+        }
+
+    }
+
+    public void activar(String cadena) {
+        if (cadena == "inicio") {
+            inicio = true;
+        } else {
+            inicio = false;
+        }
+        if (cadena=="alquiler") {
+            movimiento=true;
+        }else{
+            movimiento=false;
         }
     }
 
