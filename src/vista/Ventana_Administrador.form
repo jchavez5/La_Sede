@@ -530,7 +530,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                      <Component id="bienvenido" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="299" max="32767" attributes="0"/>
                       <Component id="NameTittle" min="-2" pref="357" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
@@ -551,7 +551,7 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="NameTittle" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bienvenido" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -597,12 +597,12 @@
                 <Property name="text" type="java.lang.String" value="Fecha:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
+            <Component class="javax.swing.JLabel" name="bienvenido">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria" size="18" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Bienvenido :"/>
+                <Property name="text" type="java.lang.String" value="Bienvenido: "/>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="SalirAdm">

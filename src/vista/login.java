@@ -6,6 +6,8 @@
 package vista;
 
 import controlador.Controlador;
+import javax.swing.JOptionPane;
+import modelo.ventana_administrador;
 
 /**
  *
@@ -124,6 +126,11 @@ public class login extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Iniciar Sesión");
         jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -217,6 +224,24 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
         c.salir();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        modelo.login p = new modelo.login();
+        p.realizaConexion();
+        String pass = contraseña.getText().trim();
+        String usu = usuario.getText().trim();
+        String g = p.logiarce(usu,pass );
+        if (g.equals("(,,,,,,,,)")){
+            JOptionPane.showMessageDialog(this, "ERROR...");
+        }else{
+            g =  g.substring(1, g.length()-1);
+            String[] j = g.split(",");
+            ventana_administrador.usuario=j;
+            Ventana_Administrador v = new Ventana_Administrador();
+            v.setVisible(true);
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments

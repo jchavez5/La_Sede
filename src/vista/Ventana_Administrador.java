@@ -6,8 +6,10 @@
 package vista;
 
 import controlador.Controlador;
+import java.util.Arrays;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import modelo.ventana_administrador;
 
 /**
  *
@@ -16,6 +18,7 @@ import javax.swing.JPanel;
 public class Ventana_Administrador extends javax.swing.JFrame {
 
     Controlador c = new Controlador();
+    static String[] usuario = ventana_administrador.usuario;
 
     /**
      * Creates new form Ventana_Administrador
@@ -23,6 +26,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     public Ventana_Administrador() {
         initComponents();
         this.setLocationRelativeTo(null);
+        bienvenido.setText(bienvenido.getText()+usuario[1]);
 
     }
 
@@ -64,7 +68,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         NameTittle = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        bienvenido = new javax.swing.JLabel();
         SalirAdm = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         MostarAdm = new javax.swing.JDesktopPane();
@@ -303,8 +307,8 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
         jLabel4.setText("Fecha:");
 
-        jLabel10.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        jLabel10.setText("Bienvenido :");
+        bienvenido.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
+        bienvenido.setText("Bienvenido: ");
 
         SalirAdm.setBackground(new java.awt.Color(255, 82, 82));
         SalirAdm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -327,7 +331,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel10)
+                .addComponent(bienvenido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 299, Short.MAX_VALUE)
                 .addComponent(NameTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(73, 73, 73)
@@ -346,7 +350,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(NameTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10))
+                            .addComponent(bienvenido))
                         .addComponent(jLabel2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -519,8 +523,8 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     private javax.swing.JPanel SdIniciAdm;
     private javax.swing.JPanel SdMovimientoAdm;
     private javax.swing.JPanel SdReporteAdm;
+    private javax.swing.JLabel bienvenido;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
