@@ -26,7 +26,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     public Ventana_Administrador() {
         initComponents();
         this.setLocationRelativeTo(null);
-       // bienvenido.setText(bienvenido.getText()+usuario[1]);
+        // bienvenido.setText(bienvenido.getText()+usuario[1]);
 
     }
 
@@ -156,6 +156,9 @@ public class Ventana_Administrador extends javax.swing.JFrame {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblAlquilerAdm1MouseExited(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblAlquilerAdm1MousePressed(evt);
+            }
         });
         AlquilerAdm.add(lblAlquilerAdm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 170, 54));
 
@@ -174,6 +177,12 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         lblMovimientoAdm.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblMovimientoAdmMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblMovimientoAdmMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblMovimientoAdmMouseExited(evt);
             }
         });
         MovimientoAdm.add(lblMovimientoAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 170, 54));
@@ -209,6 +218,12 @@ public class Ventana_Administrador extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lvlConsultaADmMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lvlConsultaADmMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lvlConsultaADmMouseExited(evt);
+            }
         });
         ConsultaAdm.add(lvlConsultaADm, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 170, 56));
 
@@ -243,6 +258,12 @@ public class Ventana_Administrador extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblReporteAdmMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblReporteAdmMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblReporteAdmMouseExited(evt);
+            }
         });
         ReportAdm.add(lblReporteAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 0, 162, 56));
 
@@ -276,6 +297,12 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         lblCrearAdm.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblCrearAdmMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblCrearAdmMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblCrearAdmMouseExited(evt);
             }
         });
         CrearAdm.add(lblCrearAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 170, 53));
@@ -431,78 +458,146 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel2MousePressed
 
     private void lblCrearAdmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCrearAdmMouseClicked
-        RegistroEmpleado r=new RegistroEmpleado();
-        c.mostrar(MostarAdm,r );
+        RegistroEmpleado r = new RegistroEmpleado();
+        c.mostrar(MostarAdm, r);
         c.setColor(CrearAdm, SdCrearAdm, lblCrearAdm);
         c.resetColorJPanel(new JPanel[]{InicioAdm, SdIniciAdm, AlquilerAdm, SdAlquilerAdm, MovimientoAdm, SdMovimientoAdm, ConsultaAdm, SdConsultaAdm, ReportAdm, SdReporteAdm});
         c.resetColorLabel(new JLabel[]{lblInicio, lblAlquilerAdm1, lblMovimientoAdm, lvlConsultaADm, lblReporteAdm});
-
+        c.activar(false, false, false, false, false, true);
     }//GEN-LAST:event_lblCrearAdmMouseClicked
 
     private void lblInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInicioMouseClicked
-        Inicio i=new Inicio();
-        c.mostrar(MostarAdm,i);
+        Inicio i = new Inicio();
+        c.mostrar(MostarAdm, i);
         c.setColor(InicioAdm, SdIniciAdm, lblInicio);
         c.resetColorJPanel(new JPanel[]{AlquilerAdm, SdAlquilerAdm, MovimientoAdm, SdMovimientoAdm, ConsultaAdm, SdConsultaAdm, ReportAdm, SdReporteAdm, CrearAdm, SdCrearAdm});
         c.resetColorLabel(new JLabel[]{lblAlquilerAdm1, lblMovimientoAdm, lvlConsultaADm, lblReporteAdm, lblCrearAdm});
-        c.activar("inicio");
-            
+        c.activar(true, false, false, false, false, false);
+
     }//GEN-LAST:event_lblInicioMouseClicked
 
     private void lblReporteAdmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReporteAdmMouseClicked
-        Reporte Re=new Reporte();
-        c.mostrar(MostarAdm,Re);
+        Reporte Re = new Reporte();
+        c.mostrar(MostarAdm, Re);
         c.setColor(ReportAdm, SdReporteAdm, lblReporteAdm);
         c.resetColorJPanel(new JPanel[]{InicioAdm, SdIniciAdm, AlquilerAdm, SdAlquilerAdm, MovimientoAdm, SdMovimientoAdm, ConsultaAdm, SdConsultaAdm, CrearAdm, SdCrearAdm});
         c.resetColorLabel(new JLabel[]{lblInicio, lblAlquilerAdm1, lblMovimientoAdm, lvlConsultaADm, lblCrearAdm});
-
+        c.activar(false, false, false, false, true, false);
     }//GEN-LAST:event_lblReporteAdmMouseClicked
 
     private void lvlConsultaADmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvlConsultaADmMouseClicked
-         Consulta Con=new Consulta();
-        c.mostrar(MostarAdm,Con);
+        Consulta Con = new Consulta();
+        c.mostrar(MostarAdm, Con);
         c.setColor(ConsultaAdm, SdConsultaAdm, lvlConsultaADm);
         c.resetColorJPanel(new JPanel[]{InicioAdm, SdIniciAdm, AlquilerAdm, SdAlquilerAdm, MovimientoAdm, SdMovimientoAdm, ReportAdm, SdReporteAdm, CrearAdm, SdCrearAdm});
         c.resetColorLabel(new JLabel[]{lblInicio, lblAlquilerAdm1, lblMovimientoAdm, lblReporteAdm, lblCrearAdm});
-
+        c.activar(false, false, false, true, false, false);
     }//GEN-LAST:event_lvlConsultaADmMouseClicked
 
     private void lblMovimientoAdmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMovimientoAdmMouseClicked
-        MovimientoCaja Mov=new MovimientoCaja();
-        c.mostrar(MostarAdm,Mov);
+        MovimientoCaja Mov = new MovimientoCaja();
+        c.mostrar(MostarAdm, Mov);
         c.setColor(MovimientoAdm, SdMovimientoAdm, lblMovimientoAdm);
         c.resetColorJPanel(new JPanel[]{InicioAdm, SdIniciAdm, AlquilerAdm, SdAlquilerAdm, ConsultaAdm, SdConsultaAdm, ReportAdm, SdReporteAdm, CrearAdm, SdCrearAdm});
         c.resetColorLabel(new JLabel[]{lblInicio, lblAlquilerAdm1, lvlConsultaADm, lblReporteAdm, lblCrearAdm});
-   
+        c.activar(false, false, true, false, false, false);
     }//GEN-LAST:event_lblMovimientoAdmMouseClicked
 
     private void lblAlquilerAdm1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAlquilerAdm1MouseClicked
-        AlquilarHabitacion al=new AlquilarHabitacion();
-        c.mostrar(MostarAdm,al);
+        AlquilarHabitacion al = new AlquilarHabitacion();
+        c.mostrar(MostarAdm, al);
         c.setColor(AlquilerAdm, SdAlquilerAdm, lblAlquilerAdm1);
         c.resetColorJPanel(new JPanel[]{InicioAdm, SdIniciAdm, MovimientoAdm, SdMovimientoAdm, ConsultaAdm, SdConsultaAdm, ReportAdm, SdReporteAdm, CrearAdm, SdCrearAdm});
         c.resetColorLabel(new JLabel[]{lblInicio, lblMovimientoAdm, lvlConsultaADm, lblReporteAdm, lblCrearAdm});
-        c.activar("alquiler");
+        c.activar(false, true, false, false, false, false);
     }//GEN-LAST:event_lblAlquilerAdm1MouseClicked
 
     private void lblInicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInicioMouseEntered
-        c.setColorMovimiento(InicioAdm, SdIniciAdm, lblInicio);
+        if (c.AcInicio == false) {
+            c.setColorMovimiento(InicioAdm, SdIniciAdm, lblInicio);
+        }
+
     }//GEN-LAST:event_lblInicioMouseEntered
 
     private void lblInicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInicioMouseExited
-        c.resetColorMovimiento(InicioAdm, SdIniciAdm, lblInicio);
-        // TODO add your handling code here:
+        if (c.AcInicio == false) {
+            c.resetColorMovimiento(InicioAdm, SdIniciAdm, lblInicio);
+        }
+
     }//GEN-LAST:event_lblInicioMouseExited
 
     private void lblAlquilerAdm1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAlquilerAdm1MouseEntered
-        c.setColorMovimiento(AlquilerAdm,SdAlquilerAdm, lblAlquilerAdm1);
-        // TODO add your handling code here:
+        if (c.AcVenta == false) {
+            c.setColorMovimiento(AlquilerAdm, SdAlquilerAdm, lblAlquilerAdm1);
+        }
+
     }//GEN-LAST:event_lblAlquilerAdm1MouseEntered
 
     private void lblAlquilerAdm1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAlquilerAdm1MouseExited
-        c.resetColorMovimiento(AlquilerAdm, SdAlquilerAdm, lblAlquilerAdm1);
-        // TODO add your handling code here:
+        if (c.AcVenta == false) {
+            c.resetColorMovimiento(AlquilerAdm, SdAlquilerAdm, lblAlquilerAdm1);
+        }
+
     }//GEN-LAST:event_lblAlquilerAdm1MouseExited
+
+    private void lblAlquilerAdm1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAlquilerAdm1MousePressed
+    }//GEN-LAST:event_lblAlquilerAdm1MousePressed
+
+    private void lblMovimientoAdmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMovimientoAdmMouseEntered
+        if (c.AcMov == false) {
+            c.setColorMovimiento(MovimientoAdm, SdMovimientoAdm, lblMovimientoAdm);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblMovimientoAdmMouseEntered
+
+    private void lblMovimientoAdmMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMovimientoAdmMouseExited
+        if (c.AcMov == false) {
+            c.resetColorMovimiento(MovimientoAdm, SdMovimientoAdm, lblMovimientoAdm);
+        }
+    }//GEN-LAST:event_lblMovimientoAdmMouseExited
+
+    private void lvlConsultaADmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvlConsultaADmMouseEntered
+        if (c.AcCons == false) {
+            c.setColorMovimiento(ConsultaAdm, SdConsultaAdm, lvlConsultaADm);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lvlConsultaADmMouseEntered
+
+    private void lvlConsultaADmMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvlConsultaADmMouseExited
+
+        if (c.AcCons==false) {
+            c.resetColorMovimiento(ConsultaAdm, SdConsultaAdm, lvlConsultaADm);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lvlConsultaADmMouseExited
+
+    private void lblReporteAdmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReporteAdmMouseEntered
+        if (c.AcRepo == false) {
+            c.setColorMovimiento(ReportAdm, SdReporteAdm, lblReporteAdm);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblReporteAdmMouseEntered
+
+    private void lblReporteAdmMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReporteAdmMouseExited
+        if (c.AcRepo == false) {
+            c.resetColorMovimiento(ReportAdm, SdReporteAdm, lblReporteAdm);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblReporteAdmMouseExited
+
+    private void lblCrearAdmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCrearAdmMouseEntered
+        if (c.AcCrea == false) {
+            c.setColorMovimiento(CrearAdm, SdCrearAdm, lblCrearAdm);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblCrearAdmMouseEntered
+
+    private void lblCrearAdmMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCrearAdmMouseExited
+         if (c.AcCrea == false) {
+            c.resetColorMovimiento(CrearAdm, SdCrearAdm, lblCrearAdm);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblCrearAdmMouseExited
 
     /**
      * @param args the command line arguments

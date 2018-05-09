@@ -24,8 +24,6 @@ import vista.login;
 public class Controlador {
 
     private login view;
-    public boolean activo = false;
-    public boolean inicio = false,alquiler=false,movimiento=false;
 
     public Controlador() {
     }
@@ -55,7 +53,6 @@ public class Controlador {
         label.setForeground(new Color(255, 82, 82));
         pane.setBackground(new Color(207, 216, 220));
         Sdpane.setBackground(new Color(255, 82, 82));
-        activo = true;
 
     }
 
@@ -105,36 +102,26 @@ public class Controlador {
 //////////////// movimiento del mouse
 
     public void setColorMovimiento(JPanel pane, JPanel Sdpane, JLabel label) {
-        if (inicio == false) {
-            label.setForeground(new Color(255, 82, 82));
-            pane.setBackground(new Color(189, 189, 189));
-            Sdpane.setBackground(new Color(189, 189, 189));
-            activo = false;
-        }
+
+        label.setForeground(new Color(255, 82, 82));
+        pane.setBackground(new Color(189, 189, 189));
+        Sdpane.setBackground(new Color(189, 189, 189));
 
     }
 
     public void resetColorMovimiento(JPanel pane, JPanel Sdpane, JLabel label) {
-        if (activo == false) {
-            label.setForeground(new Color(222, 222, 222));
-            pane.setBackground(new Color(69, 90, 100));
-            Sdpane.setBackground(new Color(69, 90, 100));
-
-        }
+        label.setForeground(new Color(222, 222, 222));
+        pane.setBackground(new Color(69, 90, 100));
+        Sdpane.setBackground(new Color(69, 90, 100));
 
     }
-
-    public void activar(String cadena) {
-        if (cadena == "inicio") {
-            inicio = true;
-        } else {
-            inicio = false;
-        }
-        if (cadena=="alquiler") {
-            movimiento=true;
-        }else{
-            movimiento=false;
-        }
-    }
-
+public boolean AcInicio=false,AcVenta=false,AcMov=false,AcCons=false,AcRepo=false,AcCrea=false;
+public void activar(boolean inicio,boolean venta,boolean movi,boolean consu,boolean repor,boolean crear){
+    AcInicio=inicio;
+    AcVenta=venta;
+    AcMov=movi;
+    AcCons=consu;
+    AcRepo=repor;
+    AcCrea=crear;
+}
 }
