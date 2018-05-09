@@ -547,7 +547,7 @@
                       <EmptySpace pref="299" max="32767" attributes="0"/>
                       <Component id="NameTittle" min="-2" pref="357" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <Component id="Fecha" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -562,7 +562,7 @@
                           <Component id="SalirAdm" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Fecha" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="NameTittle" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                                   <Component id="bienvenido" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -602,7 +602,7 @@
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="NameTittleMousePressed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="Fecha">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cambria" size="18" style="1"/>

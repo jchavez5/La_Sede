@@ -6,10 +6,13 @@
 package vista;
 
 import controlador.Controlador;
-import java.util.Arrays;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import modelo.ventana_administrador;
+import objetos.usuarios;
 
 /**
  *
@@ -18,7 +21,7 @@ import modelo.ventana_administrador;
 public class Ventana_Administrador extends javax.swing.JFrame {
 
     Controlador c = new Controlador();
-    static String[] usuario = ventana_administrador.usuario;
+    private final usuarios usuario = ventana_administrador.usuario;
 
     /**
      * Creates new form Ventana_Administrador
@@ -26,7 +29,10 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     public Ventana_Administrador() {
         initComponents();
         this.setLocationRelativeTo(null);
-        // bienvenido.setText(bienvenido.getText()+usuario[1]);
+        Date date = new Date();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        bienvenido.setText(bienvenido.getText()+usuario.getNombre());
+        Fecha.setText(Fecha.getText()+dateFormat.format(date));
 
     }
 
@@ -67,7 +73,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         NameTittle = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        Fecha = new javax.swing.JLabel();
         bienvenido = new javax.swing.JLabel();
         SalirAdm = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
@@ -343,8 +349,8 @@ public class Ventana_Administrador extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        jLabel4.setText("Fecha:");
+        Fecha.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
+        Fecha.setText("Fecha:");
 
         bienvenido.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
         bienvenido.setText("Bienvenido: ");
@@ -374,7 +380,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 299, Short.MAX_VALUE)
                 .addComponent(NameTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(73, 73, 73)
-                .addComponent(jLabel4)
+                .addComponent(Fecha)
                 .addGap(203, 203, 203)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -387,7 +393,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
                     .addComponent(SalirAdm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
+                            .addComponent(Fecha)
                             .addComponent(NameTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(bienvenido))
                         .addComponent(jLabel2)))
@@ -638,6 +644,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     private javax.swing.JPanel AlquilerAdm;
     private javax.swing.JPanel ConsultaAdm;
     private javax.swing.JPanel CrearAdm;
+    private javax.swing.JLabel Fecha;
     private javax.swing.JPanel InicioAdm;
     private javax.swing.JDesktopPane MostarAdm;
     private javax.swing.JPanel MovimientoAdm;
@@ -656,7 +663,6 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;

@@ -5,10 +5,12 @@
  */
 package vista;
 
+import objetos.usuarios;
 import controlador.Controlador;
-import java.awt.Color;
 import javax.swing.JOptionPane;
 import modelo.ventana_administrador;
+
+
 
 /**
  *
@@ -228,13 +230,11 @@ public class login extends javax.swing.JFrame {
         p.realizaConexion();
         String pass = contraseña.getText().trim();
         String usu = usuario.getText().trim();
-        String g = p.logiarce(usu,pass );
-        if (g.equals("(,,,,,,,,)")){
+        usuarios g =  p.logiarce(usu,pass );
+        if (g == null){
             JOptionPane.showMessageDialog(this, "ERROR...");
         }else{
-            g =  g.substring(1, g.length()-1);
-            String[] j = g.split(",");
-            ventana_administrador.usuario=j;
+            ventana_administrador.usuario = g;
             Ventana_Administrador v = new Ventana_Administrador();
             v.setVisible(true);
         }

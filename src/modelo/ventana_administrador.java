@@ -5,10 +5,12 @@
  */
 package modelo;
 
+import objetos.usuarios;
+
 /**
  *
  * @author User
  */
 public class ventana_administrador {
-    public static String[] usuario;
+    public static usuarios usuario;
 }
