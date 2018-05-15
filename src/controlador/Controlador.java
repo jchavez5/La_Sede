@@ -124,4 +124,17 @@ public void activar(boolean inicio,boolean venta,boolean movi,boolean consu,bool
     AcRepo=repor;
     AcCrea=crear;
 }
+ public void efectoColorButtonlogin(JPanel panelPrincipal) {
+        panelPrincipal.setBackground(new Color(207,216,220));
+    }
+
+    public void efectoQuitarColorbottonlogin(JPanel panelPrincipal) {
+        panelPrincipal.setBackground(new Color(189,189,189));
+    }
+    public void efectoQuitarColorbottonloginN(JButton panelPrincipal) {
+        panelPrincipal.setBackground(new Color(207,216,220));
+    }
+     public void efectoQuitarColorbottonloginn(JButton panelPrincipal) {
+        panelPrincipal.setBackground(new Color(189,189,189));
+    }
 }

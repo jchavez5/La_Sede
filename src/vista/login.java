@@ -8,7 +8,7 @@ package vista;
 import objetos.usuarios;
 import controlador.Controlador;
 import javax.swing.JOptionPane;
-import modelo.ventana_administrador;
+import controlador.ventana_administrador;
 
 
 
@@ -23,7 +23,7 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
-    this.setOpacity(0.6f);
+    this.setOpacity(0.8f);
     }
 
     /**
@@ -52,16 +52,16 @@ public class login extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fondo.setBackground(new java.awt.Color(0, 0, 0));
+        fondo.setBackground(new java.awt.Color(96, 125, 139));
 
-        jButton1.setBackground(new java.awt.Color(244, 67, 54));
+        jButton1.setBackground(new java.awt.Color(189, 189, 189));
         jButton1.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Iniciar Sesión");
+        jButton1.setText("Login");
         jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -104,8 +104,9 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        salir.setBackground(new java.awt.Color(244, 67, 54));
+        salir.setBackground(new java.awt.Color(189, 189, 189));
 
+        jLabel5.setBackground(new java.awt.Color(207, 216, 220));
         jLabel5.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("     Salir");
@@ -150,17 +151,16 @@ public class login extends javax.swing.JFrame {
                     .addComponent(salir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
                         .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(37, 37, 37)))))
-                        .addGap(87, 87, 87))))
+                                .addComponent(jLabel6))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(87, 87, 87))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(100, 100, 100))))
         );
         fondoLayout.setVerticalGroup(
             fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -179,7 +179,7 @@ public class login extends javax.swing.JFrame {
                 .addGap(70, 70, 70))
         );
 
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 370, 340));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -213,11 +213,11 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
-        c.efectoColocarColor(salir);
+        c.efectoColorButtonlogin(salir);
     }//GEN-LAST:event_jLabel5MouseEntered
 
     private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseExited
-        c.efectoQuitarColorSalir(salir);
+        c.efectoQuitarColorbottonlogin(salir);
     }//GEN-LAST:event_jLabel5MouseExited
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -237,15 +237,16 @@ public class login extends javax.swing.JFrame {
             ventana_administrador.usuario = g;
             Ventana_Administrador v = new Ventana_Administrador();
             v.setVisible(true);
+            this.dispose();
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-        c.efectoColorButton(jButton1);
+        c.efectoQuitarColorbottonloginN(jButton1);
     }//GEN-LAST:event_jButton1MouseEntered
 
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-        c.efectoQuitarColorbotton(jButton1);
+        c.efectoQuitarColorbottonloginn(jButton1);
     }//GEN-LAST:event_jButton1MouseExited
 
     /**

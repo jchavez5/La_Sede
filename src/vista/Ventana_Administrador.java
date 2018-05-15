@@ -6,12 +6,13 @@
 package vista;
 
 import controlador.Controlador;
+import java.awt.Color;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import modelo.ventana_administrador;
+import controlador.ventana_administrador;
 import objetos.usuarios;
 
 /**
@@ -31,7 +32,8 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        bienvenido.setText(bienvenido.getText()+usuario.getNombre());
+        bienvenido.setText(bienvenido.getText()+" "+usuario.getNombre());
+        
         Fecha.setText(Fecha.getText()+dateFormat.format(date));
 
     }
@@ -73,12 +75,12 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         NameTittle = new javax.swing.JLabel();
-        Fecha = new javax.swing.JLabel();
-        bienvenido = new javax.swing.JLabel();
         SalirAdm = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
+        Fecha = new javax.swing.JLabel();
         MostarAdm = new javax.swing.JDesktopPane();
         jPanel3 = new javax.swing.JPanel();
+        bienvenido = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(207, 216, 220));
@@ -349,12 +351,6 @@ public class Ventana_Administrador extends javax.swing.JFrame {
             }
         });
 
-        Fecha.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        Fecha.setText("Fecha:");
-
-        bienvenido.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        bienvenido.setText("Bienvenido: ");
-
         SalirAdm.setBackground(new java.awt.Color(255, 82, 82));
         SalirAdm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -364,24 +360,38 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         jLabel14.setText(" Cerrar Sesión");
         jLabel14.setToolTipText("");
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel14MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel14MouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jLabel14MousePressed(evt);
             }
         });
         SalirAdm.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 40));
 
+        Fecha.setBackground(new java.awt.Color(204, 204, 204));
+        Fecha.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
+        Fecha.setForeground(new java.awt.Color(255, 255, 255));
+        Fecha.setText("Fecha :");
+        Fecha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                FechaMousePressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bienvenido)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 299, Short.MAX_VALUE)
+                .addContainerGap(423, Short.MAX_VALUE)
                 .addComponent(NameTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73)
-                .addComponent(Fecha)
-                .addGap(203, 203, 203)
+                .addGap(45, 45, 45)
+                .addComponent(Fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SalirAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -390,14 +400,17 @@ public class Ventana_Administrador extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(SalirAdm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Fecha)
-                            .addComponent(NameTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bienvenido))
-                        .addComponent(jLabel2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(SalirAdm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(NameTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 40));
@@ -432,6 +445,17 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 640, 1300, -1));
+
+        bienvenido.setBackground(new java.awt.Color(204, 204, 204));
+        bienvenido.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
+        bienvenido.setForeground(new java.awt.Color(255, 255, 255));
+        bienvenido.setText("Bienvenido:");
+        bienvenido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                bienvenidoMousePressed(evt);
+            }
+        });
+        jPanel1.add(bienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 210, 34));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -604,6 +628,22 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_lblCrearAdmMouseExited
+
+    private void FechaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FechaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FechaMousePressed
+
+    private void bienvenidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bienvenidoMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bienvenidoMousePressed
+
+    private void jLabel14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseEntered
+        c.efectoColocarColor(SalirAdm);
+    }//GEN-LAST:event_jLabel14MouseEntered
+
+    private void jLabel14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseExited
+        c.efectoQuitarColorSalir(SalirAdm);
+    }//GEN-LAST:event_jLabel14MouseExited
 
     /**
      * @param args the command line arguments
