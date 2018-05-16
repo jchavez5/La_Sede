@@ -23,7 +23,6 @@ public class Ventana_Administrador extends javax.swing.JFrame {
 
     Controlador c = new Controlador();
     ventana_administrador cAdm=new  ventana_administrador();
-    private final usuarios usuario = ventana_administrador.usuario;
 
     /**
      * Creates new form Ventana_Administrador
@@ -77,6 +76,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         Fecha = new javax.swing.JLabel();
         MostarAdm = new javax.swing.JDesktopPane();
         jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         bienvenido = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -443,16 +443,35 @@ public class Ventana_Administrador extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 640, 1300, -1));
 
+        jPanel4.setBackground(new java.awt.Color(207, 216, 220));
+
         bienvenido.setBackground(new java.awt.Color(204, 204, 204));
         bienvenido.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        bienvenido.setForeground(new java.awt.Color(255, 255, 255));
+        bienvenido.setForeground(new java.awt.Color(0, 0, 0));
         bienvenido.setText("Bienvenido:");
         bienvenido.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 bienvenidoMousePressed(evt);
             }
         });
-        jPanel1.add(bienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 210, 34));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 10, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 220, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -706,6 +725,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblAlquilerAdm1;
     private javax.swing.JLabel lblCrearAdm;
     private javax.swing.JLabel lblInicio;

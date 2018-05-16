@@ -135,4 +135,13 @@ public void activar(boolean inicio,boolean venta,boolean movi,boolean consu,bool
      public void efectoQuitarColorbottonloginn(JButton panelPrincipal) {
         panelPrincipal.setBackground(new Color(189,189,189));
     }
+     ///////movimiento del mouse lbl -> botones diseño nuevo
+     public void EfectoLabel(JPanel panel,JLabel label){
+         panel.setBackground(new Color(69,90,100));
+         label.setForeground(new Color(255,255,255));
+     }
+     public void EfectoQuitarLabel(JPanel panel,JLabel label){
+         panel.setBackground(new Color(255,255,255));
+         label.setForeground(new Color(255,82,82));
+     }
 }

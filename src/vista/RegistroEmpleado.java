@@ -481,7 +481,7 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(PUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();
@@ -541,7 +541,6 @@ c.setColorMovimiento(PEliminar, PEliminar, lblEliminar);
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PBuscar;
     private javax.swing.JPanel PEliminar;
-    private javax.swing.JPanel PEliminar1;
     private javax.swing.JPanel PGuardar;
     private javax.swing.JPanel PModificar;
     private javax.swing.JPanel PNuevo;
@@ -553,11 +552,8 @@ c.setColorMovimiento(PEliminar, PEliminar, lblEliminar);
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -566,16 +562,13 @@ c.setColorMovimiento(PEliminar, PEliminar, lblEliminar);
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel lblBuscar;
     private javax.swing.JLabel lblEliminar;
-    private javax.swing.JLabel lblEliminar1;
     private javax.swing.JLabel lblGuardar;
     private javax.swing.JLabel lblModificar;
     private javax.swing.JLabel lblNuevo;
