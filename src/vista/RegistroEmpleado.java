@@ -71,10 +71,11 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
         jPanel2.setBorder(new javax.swing.border.MatteBorder(null));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        PGuardar.setBackground(new java.awt.Color(69, 90, 100));
+        PGuardar.setBackground(new java.awt.Color(255, 255, 255));
+        PGuardar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 82, 82), 5));
 
         lblGuardar.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        lblGuardar.setForeground(new java.awt.Color(255, 255, 255));
+        lblGuardar.setForeground(new java.awt.Color(255, 82, 82));
         lblGuardar.setText("Guardar");
         lblGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -103,9 +104,8 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
         PGuardarLayout.setVerticalGroup(
             PGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(PGuardarLayout.createSequentialGroup()
-                .addGap(0, 16, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addContainerGap())
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(lblGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -146,12 +146,13 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
         jLabel8.setForeground(new java.awt.Color(33, 33, 33));
         jLabel8.setText("Crear Empleado.");
 
-        PNuevo.setBackground(new java.awt.Color(69, 90, 100));
+        PNuevo.setBackground(new java.awt.Color(255, 255, 255));
+        PNuevo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 82, 82), 5));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Add New_32px.png"))); // NOI18N
 
         lblNuevo.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        lblNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        lblNuevo.setForeground(new java.awt.Color(255, 82, 82));
         lblNuevo.setText("Nuevo");
         lblNuevo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -170,26 +171,25 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
         PNuevoLayout.setHorizontalGroup(
             PNuevoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PNuevoLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addComponent(jLabel19)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lblNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PNuevoLayout.setVerticalGroup(
             PNuevoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNuevoLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addComponent(jLabel19)
-                .addContainerGap())
+            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(lblNuevo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        PModificar.setBackground(new java.awt.Color(69, 90, 100));
+        PModificar.setBackground(new java.awt.Color(255, 255, 255));
+        PModificar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 82, 82), 5));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Edit File_32px.png"))); // NOI18N
 
         lblModificar.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        lblModificar.setForeground(new java.awt.Color(255, 255, 255));
+        lblModificar.setForeground(new java.awt.Color(255, 82, 82));
         lblModificar.setText("Modificar");
         lblModificar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -211,11 +211,8 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
         );
         PModificarLayout.setVerticalGroup(
             PModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PModificarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addComponent(lblModificar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -250,7 +247,7 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(PNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(PNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(PGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -279,13 +276,11 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(PNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(PModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(PGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(PNuevo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(PModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -304,10 +299,11 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
         jTextField8.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         jTextField8.setForeground(new java.awt.Color(0, 0, 0));
 
-        PEliminar.setBackground(new java.awt.Color(69, 90, 100));
+        PEliminar.setBackground(new java.awt.Color(255, 255, 255));
+        PEliminar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 82, 82), 5));
 
         lblEliminar.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        lblEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        lblEliminar.setForeground(new java.awt.Color(255, 82, 82));
         lblEliminar.setText("Eliminar");
         lblEliminar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -325,26 +321,27 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
         PEliminarLayout.setHorizontalGroup(
             PEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PEliminarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel37)
+                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
+                .addComponent(lblEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         PEliminarLayout.setVerticalGroup(
             PEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PEliminarLayout.createSequentialGroup()
-                .addComponent(jLabel37)
+            .addGroup(PEliminarLayout.createSequentialGroup()
+                .addGroup(PEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
-            .addComponent(lblEliminar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        PBuscar.setBackground(new java.awt.Color(69, 90, 100));
+        PBuscar.setBackground(new java.awt.Color(255, 255, 255));
+        PBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 82, 82), 5));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Search_32px.png"))); // NOI18N
 
         lblBuscar.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        lblBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        lblBuscar.setForeground(new java.awt.Color(255, 82, 82));
         lblBuscar.setText("Buscar");
         lblBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -367,11 +364,8 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
         );
         PBuscarLayout.setVerticalGroup(
             PBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PBuscarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
             .addComponent(lblBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -393,8 +387,8 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
                                 .addComponent(PBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(33, 33, 33)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(PEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -408,8 +402,8 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(PEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(PBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -422,13 +416,13 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
         jLabel9.setText("Usuario del empleado.");
 
         jLabel10.setBackground(new java.awt.Color(255, 82, 82));
-        jLabel10.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(33, 33, 33));
+        jLabel10.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(117, 117, 117));
         jLabel10.setText("Contraseña :");
 
         jLabel11.setBackground(new java.awt.Color(255, 82, 82));
-        jLabel11.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(33, 33, 33));
+        jLabel11.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(117, 117, 117));
         jLabel11.setText("Usuario :");
 
         javax.swing.GroupLayout PUsuarioLayout = new javax.swing.GroupLayout(PUsuario);
@@ -452,9 +446,9 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
+                .addGap(53, 53, 53))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -464,9 +458,9 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addGap(33, 33, 33))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -476,40 +470,40 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(PUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(PUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblNuevoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNuevoMouseEntered
-        c.setColorMovimiento(PNuevo,PNuevo,lblNuevo);
+        c.EfectoLabel(PNuevo,lblNuevo);
     }//GEN-LAST:event_lblNuevoMouseEntered
 
     private void lblNuevoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNuevoMouseExited
-        c.resetColorMovimiento(PNuevo,PNuevo,lblNuevo);
+        c.EfectoQuitarLabel(PNuevo,lblNuevo);
 
     }//GEN-LAST:event_lblNuevoMouseExited
 
     private void lblGuardarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseEntered
-        c.setColorMovimiento(PGuardar, PGuardar, lblGuardar);
+        c.EfectoLabel( PGuardar, lblGuardar);
     }//GEN-LAST:event_lblGuardarMouseEntered
 
     private void lblGuardarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseExited
-        c.resetColorMovimiento(PGuardar, PGuardar, lblGuardar);
+        c.EfectoQuitarLabel( PGuardar, lblGuardar);
     }//GEN-LAST:event_lblGuardarMouseExited
 
     private void lblEliminarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEliminarMouseEntered
-c.setColorMovimiento(PEliminar, PEliminar, lblEliminar);
+        c.EfectoLabel( PEliminar, lblEliminar);
     }//GEN-LAST:event_lblEliminarMouseEntered
 
     private void lblEliminarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEliminarMouseExited
-       c.resetColorMovimiento(PEliminar, PEliminar, lblEliminar);
+       c.EfectoQuitarLabel(PEliminar, lblEliminar);
     }//GEN-LAST:event_lblEliminarMouseExited
 
     private void lblGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseClicked
@@ -521,19 +515,19 @@ c.setColorMovimiento(PEliminar, PEliminar, lblEliminar);
     }//GEN-LAST:event_lblNuevoMouseClicked
 
     private void lblModificarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblModificarMouseEntered
-        c.setColorMovimiento(PModificar, PModificar, lblModificar);
+        c.EfectoLabel(PModificar, lblModificar);
     }//GEN-LAST:event_lblModificarMouseEntered
 
     private void lblModificarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblModificarMouseExited
-    c.resetColorMovimiento(PModificar, PModificar, lblModificar);
+        c.EfectoQuitarLabel( PModificar, lblModificar);
     }//GEN-LAST:event_lblModificarMouseExited
 
     private void lblBuscarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblBuscarMouseEntered
-        c.setColorMovimiento(PBuscar,PBuscar,lblBuscar);
+        c.EfectoLabel(PBuscar,lblBuscar);
     }//GEN-LAST:event_lblBuscarMouseEntered
 
     private void lblBuscarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblBuscarMouseExited
-        c.resetColorMovimiento(PBuscar,PBuscar,lblBuscar);
+        c.EfectoQuitarLabel(PBuscar,lblBuscar);
         // TODO add your handling code here:
     }//GEN-LAST:event_lblBuscarMouseExited
 
