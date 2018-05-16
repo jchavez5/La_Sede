@@ -23,7 +23,7 @@ public void realizaConexion(){
         String urlDatabase =  "jdbc:postgresql://localhost:5432/la_sede";
         try {
         Class.forName("org.postgresql.Driver");
-        conn = DriverManager.getConnection(urlDatabase,  "postgres", "admin");
+        conn = DriverManager.getConnection(urlDatabase,  "postgres", "q4xnkvc1");
         } catch (ClassNotFoundException | SQLException e) {
         System.out.println("Ocurrio un error : "+e.getMessage());
         }

@@ -22,6 +22,7 @@ import objetos.usuarios;
 public class Ventana_Administrador extends javax.swing.JFrame {
 
     Controlador c = new Controlador();
+    ventana_administrador cAdm=new  ventana_administrador();
     private final usuarios usuario = ventana_administrador.usuario;
 
     /**
@@ -30,11 +31,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     public Ventana_Administrador() {
         initComponents();
         this.setLocationRelativeTo(null);
-        Date date = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        bienvenido.setText(bienvenido.getText()+" "+usuario.getNombre());
-        
-        Fecha.setText(Fecha.getText()+dateFormat.format(date));
+        cAdm.IniciarLogin(bienvenido,Fecha);
 
     }
 

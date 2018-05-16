@@ -5,30 +5,29 @@
  */
 package controlador;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JLabel;
 import objetos.usuarios;
-import vista.Ventana_Administrador;
 
 /**
  *
  * @author User
  */
 public class ventana_administrador {
+
     public static usuarios usuario;
-    private Ventana_Administrador view;
 
     public ventana_administrador() {
     }
-   // bienvenido.setText(bienvenido.getText()+" "+usuario.getNombre());
-    public ventana_administrador(Ventana_Administrador view) {
-        this.view = view;
+
+    public void IniciarLogin(JLabel texto, JLabel fecha) {
+        Date date = new Date();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        texto.setText(texto.getText() + " " + usuario.getNombre());
+        fecha.setText(fecha.getText() + " " + dateFormat.format(date));
+
     }
-    public String IniciarLogin(String nombre,JLabel texto){
-        texto.setText(texto.getText()+" "+usuario.getNombre());
-        return nombre;
-    }
-    
-    
-    
-    
+
 }

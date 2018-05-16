@@ -68,9 +68,7 @@ public class Controlador {
         }
     }
 
-    public void efectoQuitarColor(JPanel panelPrincipal) {
-        panelPrincipal.setBackground(new Color(69, 90, 100));
-    }
+   
 
     public void efectoQuitarColorSalir(JPanel panelPrincipal) {
         panelPrincipal.setBackground(new Color(244, 67, 54));
