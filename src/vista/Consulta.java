@@ -17,14 +17,14 @@ import javax.swing.JPanel;
 public class Consulta extends javax.swing.JInternalFrame {
 
     Controlador c = new Controlador();
-    Consultar cons=new Consultar(this);
+    Consultar cons = new Consultar(this);
 
     /**
      * Creates new form Consulta
      */
     public Consulta() {
         initComponents();
-        cons.iniciar(fecha,todos,Buscar,dateFecha);
+        cons.activar(fecha, todos, Buscar, dateFecha);
     }
 
     /**
@@ -326,9 +326,9 @@ public class Consulta extends javax.swing.JInternalFrame {
                 .addGroup(reportesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(todos)
                     .addComponent(Buscar))
-                .addGap(12, 12, 12)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -356,72 +356,102 @@ public class Consulta extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblEmpleadoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEmpleadoMouseEntered
-        if (cons.Empleado==false) {
+        if (cons.Empleado == false) {
             c.EfectoLabel(PEmpleado, lblEmpleado);
         }
-        
+
     }//GEN-LAST:event_lblEmpleadoMouseEntered
 
     private void lblEmpleadoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEmpleadoMouseExited
-        if (cons.Empleado==false) {
-          c.EfectoQuitarLabel(PEmpleado, lblEmpleado);  
-        }        
+        if (cons.Empleado == false) {
+            c.EfectoQuitarLabel(PEmpleado, lblEmpleado);
+        }
     }//GEN-LAST:event_lblEmpleadoMouseExited
 
     private void lblVentasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVentasMouseEntered
-        c.EfectoLabel(PVentas, lblVentas);
+        if (cons.Venta == false) {
+            c.EfectoLabel(PVentas, lblVentas);
+        }
+
     }//GEN-LAST:event_lblVentasMouseEntered
 
     private void lblVentasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVentasMouseExited
-          c.EfectoQuitarLabel(PVentas, lblVentas);
-        
+        if (cons.Venta == false) {
+            c.EfectoQuitarLabel(PVentas, lblVentas);
+
+        }
+
     }//GEN-LAST:event_lblVentasMouseExited
 
     private void lblFlujoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblFlujoMouseEntered
-        c.EfectoLabel(PCaja, lblFlujo);
+        if (cons.Caja == false) {
+            c.EfectoLabel(PCaja, lblFlujo);
+        }
+
     }//GEN-LAST:event_lblFlujoMouseEntered
 
     private void lblFlujoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblFlujoMouseExited
-         c.EfectoQuitarLabel(PCaja, lblFlujo);
+        if (cons.Caja == false) {
+            c.EfectoQuitarLabel(PCaja, lblFlujo);
+        }
+
     }//GEN-LAST:event_lblFlujoMouseExited
 
     private void fechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fechaActionPerformed
         // TODO add your handling code here:
-      
+
     }//GEN-LAST:event_fechaActionPerformed
 
     private void todosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_todosActionPerformed
         // TODO add your handling code here:
-     
+
 
     }//GEN-LAST:event_todosActionPerformed
 
     private void lblVentas1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVentas1MouseEntered
-c.EfectoLabel( PVentasE, lblVentas1);
+        if (cons.VenteEm == false) {
+            c.EfectoLabel(PVentasE, lblVentas1);
+        }
     }//GEN-LAST:event_lblVentas1MouseEntered
 
     private void lblVentas1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVentas1MouseExited
-        c.EfectoQuitarLabel( PVentasE, lblVentas1);
+        if (cons.VenteEm == false) {
+            c.EfectoQuitarLabel(PVentasE, lblVentas1);
+        }
+
     }//GEN-LAST:event_lblVentas1MouseExited
 
     private void lblEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEmpleadoMouseClicked
-        cons.botonEmpleado(reportesPanel, titulo);
+        cons.EventoConsultaActivar(1,titulo, fecha, todos, Buscar, dateFecha);
         c.EfectoLabel(PEmpleado, lblEmpleado);
         cons.activar(true, false, false, false);
-        cons.resetColorJPanel(new JPanel[]{PVentas,PVentasE,PCaja});
-        cons.resetColorLabel(new JLabel[]{lblVentas,lblFlujo,lblVentas1});
+        cons.resetColorJPanel(new JPanel[]{PVentas, PVentasE, PCaja});
+        cons.resetColorLabel(new JLabel[]{lblVentas, lblFlujo, lblVentas1});
     }//GEN-LAST:event_lblEmpleadoMouseClicked
 
     private void lblVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVentasMouseClicked
-        cons.botonVentas(reportesPanel, titulo);
+        cons.EventoConsultaActivar(2,titulo, fecha, todos, Buscar, dateFecha);
+        c.EfectoLabel(PVentas, lblVentas);
+        cons.activar(false, true, false, false);
+        cons.resetColorJPanel(new JPanel[]{PEmpleado, PVentasE, PCaja});
+        cons.resetColorLabel(new JLabel[]{lblEmpleado, lblFlujo, lblVentas1});
+
     }//GEN-LAST:event_lblVentasMouseClicked
 
     private void lblVentas1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVentas1MouseClicked
-        cons.botonVentasEmpleado(reportesPanel, titulo);
+        cons.EventoConsultaActivar(3,titulo, fecha, todos, Buscar, dateFecha);
+        c.EfectoLabel(PVentasE, lblVentas1);
+        cons.activar(false, false, true, false);
+        cons.resetColorJPanel(new JPanel[]{PEmpleado, PVentas, PCaja});
+        cons.resetColorLabel(new JLabel[]{lblEmpleado, lblFlujo, lblVentas});
     }//GEN-LAST:event_lblVentas1MouseClicked
 
     private void lblFlujoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblFlujoMouseClicked
-        cons.botonCaja(reportesPanel, titulo);
+        cons.EventoConsultaActivar(4,titulo, fecha, todos, Buscar, dateFecha);
+        c.EfectoLabel(PCaja, lblFlujo);
+        cons.activar(false, false, false, true);
+        cons.resetColorJPanel(new JPanel[]{PEmpleado, PVentas, PVentasE});
+        cons.resetColorLabel(new JLabel[]{lblEmpleado, lblVentas1, lblVentas});
     }//GEN-LAST:event_lblFlujoMouseClicked
 
 
