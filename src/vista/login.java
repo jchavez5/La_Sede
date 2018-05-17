@@ -209,7 +209,8 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_contraseñaFocusLost
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        c.salir();
+        c.cerrar();
+        
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered

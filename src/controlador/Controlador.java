@@ -36,14 +36,6 @@ public class Controlador {
         view.setLocationRelativeTo(null);
     }
 
-    public void salir() {
-        int dialogButton = JOptionPane.YES_NO_OPTION;
-        int resultado = JOptionPane.showConfirmDialog(null, "Desea salir del login?", "EXIT", dialogButton);
-        if (resultado == 0) {
-            System.exit(0);
-        }
-    }
-
     public void cerrar() {
         System.exit(0);
 
@@ -67,8 +59,6 @@ public class Controlador {
             pane[i].setBackground(new Color(69, 90, 100));
         }
     }
-
-   
 
     public void efectoQuitarColorSalir(JPanel panelPrincipal) {
         panelPrincipal.setBackground(new Color(244, 67, 54));
@@ -113,35 +103,51 @@ public class Controlador {
         Sdpane.setBackground(new Color(69, 90, 100));
 
     }
-public boolean AcInicio=false,AcVenta=false,AcMov=false,AcCons=false,AcRepo=false,AcCrea=false;
-public void activar(boolean inicio,boolean venta,boolean movi,boolean consu,boolean repor,boolean crear){
-    AcInicio=inicio;
-    AcVenta=venta;
-    AcMov=movi;
-    AcCons=consu;
-    AcRepo=repor;
-    AcCrea=crear;
-}
- public void efectoColorButtonlogin(JPanel panelPrincipal) {
-        panelPrincipal.setBackground(new Color(207,216,220));
+    public boolean AcInicio = false, AcVenta = false, AcMov = false, AcCons = false, AcRepo = false, AcCrea = false;
+
+    public void activar(boolean inicio, boolean venta, boolean movi, boolean consu, boolean repor, boolean crear) {
+        AcInicio = inicio;
+        AcVenta = venta;
+        AcMov = movi;
+        AcCons = consu;
+        AcRepo = repor;
+        AcCrea = crear;
+    }
+
+    public void efectoColorButtonlogin(JPanel panelPrincipal) {
+        panelPrincipal.setBackground(new Color(207, 216, 220));
     }
 
     public void efectoQuitarColorbottonlogin(JPanel panelPrincipal) {
-        panelPrincipal.setBackground(new Color(189,189,189));
+        panelPrincipal.setBackground(new Color(189, 189, 189));
     }
+
     public void efectoQuitarColorbottonloginN(JButton panelPrincipal) {
-        panelPrincipal.setBackground(new Color(207,216,220));
+        panelPrincipal.setBackground(new Color(207, 216, 220));
     }
-     public void efectoQuitarColorbottonloginn(JButton panelPrincipal) {
-        panelPrincipal.setBackground(new Color(189,189,189));
+
+    public void efectoQuitarColorbottonloginn(JButton panelPrincipal) {
+        panelPrincipal.setBackground(new Color(189, 189, 189));
     }
-     ///////movimiento del mouse lbl -> botones diseño nuevo
-     public void EfectoLabel(JPanel panel,JLabel label){
-         panel.setBackground(new Color(69,90,100));
-         label.setForeground(new Color(255,255,255));
-     }
-     public void EfectoQuitarLabel(JPanel panel,JLabel label){
-         panel.setBackground(new Color(255,255,255));
-         label.setForeground(new Color(255,82,82));
-     }
+    ///////movimiento del mouse lbl -> botones diseño nuevo
+
+    public void EfectoLabel(JPanel panel, JLabel label) {
+        panel.setBackground(new Color(69, 90, 100));
+        label.setForeground(new Color(255, 255, 255));
+    }
+
+    public void EfectoQuitarLabel(JPanel panel, JLabel label) {
+        panel.setBackground(new Color(255, 255, 255));
+        label.setForeground(new Color(255, 82, 82));
+    }
+
+    public void visibleFalseJpanel(JPanel[] pane) {
+        for (int i = 0; i < pane.length; i++) {
+            pane[i].setVisible(false);
+        }
+    }
+
+
+    
+    
 }

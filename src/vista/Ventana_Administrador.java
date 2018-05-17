@@ -496,7 +496,9 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_NameTittleMousePressed
 
     private void jLabel14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MousePressed
-        c.salir();
+    Salir  salir =new Salir();
+    salir.setVisible(true);
+    this.setVisible(false);
     }//GEN-LAST:event_jLabel14MousePressed
 
     private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
