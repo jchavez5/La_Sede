@@ -166,6 +166,14 @@ public  boolean vacio(JTextField[] txt ){
          }
      return true;
 }
+//setiar
+public  void setiarCaja(JTextField[] txt ){
+     for (int i = 0; i < txt.length; i++) {
+            txt[i].setText("");
+            }
+         }
+ 
+
 
     
     

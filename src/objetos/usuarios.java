@@ -13,20 +13,23 @@ package objetos;
 public class usuarios {
     private int id;
     private String nombre;
+    private String apellido;
     private String telefono;
     private  int cedula;
     private  int idrol;
     private String correo;
-    private String usario;
-    private String contrasena;
-    private boolean visible;
-    
-    public String getContrasena() {
-        return contrasena;
+
+    public usuarios() {
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public usuarios(int id, String nombre, String apellido, String telefono, int cedula, int idrol, String correo) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.cedula = cedula;
+        this.idrol = idrol;
+        this.correo = correo;
     }
 
     public int getId() {
@@ -43,6 +46,14 @@ public class usuarios {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String getTelefono() {
@@ -76,34 +87,7 @@ public class usuarios {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-
-    public String getUsario() {
-        return usario;
-    }
-
-    public void setUsario(String usario) {
-        this.usario = usario;
-    }
-
-    public boolean isVisible() {
-        return visible;
-    }
-
-    public void setVisible(boolean visible) {
-        this.visible = visible;
-    }
-
-    public usuarios(int id, String nombre, String telefono, int cedula, int idrol, String correo, String usario, String contrasena, boolean visible) {
-        this.id = id;
-        this.nombre = nombre;
-        this.telefono = telefono;
-        this.cedula = cedula;
-        this.idrol = idrol;
-        this.correo = correo;
-        this.usario = usario;
-        this.contrasena = contrasena;
-        this.visible = visible;
-    }
+    
     
     
     

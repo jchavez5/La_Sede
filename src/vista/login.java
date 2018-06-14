@@ -8,7 +8,9 @@ package vista;
 import controlador.Controlador;
 import javax.swing.JOptionPane;
 import controlador.ventana_administrador;
+import static java.awt.image.ImageObserver.WIDTH;
 import objetos.loginObjetos;
+import objetos.usuarios;
 
 
 
@@ -237,6 +239,9 @@ public class login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "ERROR AL ENTRAR AL SISTEMA VERIFIQUE SUS CREDENCIALES...");
         }else{
             ventana_administrador.usuario = g;
+            
+            ventana_administrador.usu = p.traerUsuario(g.getId());
+            usuarios s = new usuarios(WIDTH, usu, pass, usu, WIDTH, WIDTH, usu);
             Ventana_Administrador v = new Ventana_Administrador();
             v.setVisible(true);
             this.dispose();

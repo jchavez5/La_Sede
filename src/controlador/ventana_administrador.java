@@ -19,14 +19,22 @@ import objetos.usuarios;
 public class ventana_administrador {
 
     public static loginObjetos usuario;
+    public static usuarios usu;
 
     public ventana_administrador() {
     }
 
     public void IniciarLogin(JLabel texto, JLabel fecha) {
         Date date = new Date();
+        modelo.login logeo =new modelo.login();
+        //Date
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         fecha.setText(fecha.getText() + " " + dateFormat.format(date));
+        //al iniciar programa
+        logeo.realizaConexion();
+        String nombre = logeo.TraerRolUsuario(usu.getIdrol());
+        texto.setText(texto.getText()+""+ nombre);
+       
 
     }
 

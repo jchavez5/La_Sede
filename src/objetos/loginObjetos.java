@@ -10,15 +10,27 @@ package objetos;
  * @author Josechavez
  */
 public class loginObjetos {
+    private int id; 
     private String usuario;
     private String  contraseña;
     private boolean visible;
 
-    public loginObjetos(String usuario, String contraseña, boolean visible) {
+    public loginObjetos(int id, String usuario, String contraseña, boolean visible) {
+        this.id = id;
         this.usuario = usuario;
         this.contraseña = contraseña;
         this.visible = visible;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+   
 
     public loginObjetos() {
     }

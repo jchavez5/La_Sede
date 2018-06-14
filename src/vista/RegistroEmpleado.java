@@ -556,7 +556,8 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_lblGuardarMouseClicked
 
     private void lblNuevoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblNuevoMouseClicked
-       PUsuario.setVisible(false); 
+        c.setiarCaja(new JTextField[]{txtNombre,txtCedula,txtApellido,txtCorreo,txtTelefono});
+        PUsuario.setVisible(false); 
     }//GEN-LAST:event_lblNuevoMouseClicked
 
     private void lblModificarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblModificarMouseEntered
