@@ -12,9 +12,8 @@ package objetos;
 public class PasswordGenerator {
     public static String NUMEROS = "0123456789";
  
-	public static String MAYUSCULAS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
  
-	public static String MINUSCULAS = "abcdefghijklmnopqrstuvwxyz";
+	public static String MINUSCULAS = "abcdefghijklmnopqrstuvwxyz1234567890";
  
 	public static String ESPECIALES = "ñÑ";
  
@@ -28,7 +27,7 @@ public class PasswordGenerator {
 	}
  
 	public static String getPassword(int length) {
-		return getPassword(NUMEROS + MAYUSCULAS + MINUSCULAS, length);
+		return getPassword(NUMEROS  + MINUSCULAS, length);
 	}
  
 	public static String getPassword(String key, int length) {

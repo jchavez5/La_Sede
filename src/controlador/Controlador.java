@@ -148,15 +148,24 @@ public class Controlador {
             pane[i].setVisible(false);
         }
     }
+    //generador de el login
 public void GenerarLogin(JTextField cedula,JLabel result,JLabel resultaContraseña){
-    String n =cedula.toString().trim();
+    String n =cedula.getText();
      result.setText(n);
      resultaContraseña.setText(PasswordGenerator.getPassword(
 		PasswordGenerator.MINUSCULAS+
-		PasswordGenerator.MAYUSCULAS+
-		PasswordGenerator.ESPECIALES,10));
+		PasswordGenerator.ESPECIALES,6));
   
     }
+//validaciones 
+public  boolean vacio(JTextField[] txt ){
+     for (int i = 0; i < txt.length; i++) {
+            if(txt[i].getText().toString().equals("")){
+                 return false;
+            }
+         }
+     return true;
+}
 
     
     

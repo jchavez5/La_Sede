@@ -56,7 +56,7 @@ public class login extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fondo.setBackground(new java.awt.Color(96, 125, 139));
+        fondo.setBackground(new java.awt.Color(255, 51, 51));
 
         jButton1.setBackground(new java.awt.Color(189, 189, 189));
         jButton1.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
@@ -233,7 +233,8 @@ public class login extends javax.swing.JFrame {
         String usu = usuario.getText().trim();
         loginObjetos g =  p.logiarce(usu,pass );
         if (g == null){
-            JOptionPane.showMessageDialog(this, "ERROR...");
+          
+            JOptionPane.showMessageDialog(this, "ERROR AL ENTRAR AL SISTEMA VERIFIQUE SUS CREDENCIALES...");
         }else{
             ventana_administrador.usuario = g;
             Ventana_Administrador v = new Ventana_Administrador();
