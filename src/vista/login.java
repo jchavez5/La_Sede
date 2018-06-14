@@ -5,10 +5,10 @@
  */
 package vista;
 
-import objetos.usuarios;
 import controlador.Controlador;
 import javax.swing.JOptionPane;
 import controlador.ventana_administrador;
+import objetos.loginObjetos;
 
 
 
@@ -231,7 +231,7 @@ public class login extends javax.swing.JFrame {
         p.realizaConexion();
         String pass = contraseña.getText().trim();
         String usu = usuario.getText().trim();
-        usuarios g =  p.logiarce(usu,pass );
+        loginObjetos g =  p.logiarce(usu,pass );
         if (g == null){
             JOptionPane.showMessageDialog(this, "ERROR...");
         }else{

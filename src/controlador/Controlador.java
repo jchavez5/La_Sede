@@ -15,6 +15,8 @@ import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
+import objetos.PasswordGenerator;
 import vista.login;
 
 /**
@@ -146,7 +148,15 @@ public class Controlador {
             pane[i].setVisible(false);
         }
     }
-
+public void GenerarLogin(JTextField cedula,JLabel result,JLabel resultaContraseña){
+    String n =cedula.toString().trim();
+     result.setText(n);
+     resultaContraseña.setText(PasswordGenerator.getPassword(
+		PasswordGenerator.MINUSCULAS+
+		PasswordGenerator.MAYUSCULAS+
+		PasswordGenerator.ESPECIALES,10));
+  
+    }
 
     
     

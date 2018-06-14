@@ -9,6 +9,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JLabel;
+import objetos.loginObjetos;
 import objetos.usuarios;
 
 /**
@@ -17,7 +18,7 @@ import objetos.usuarios;
  */
 public class ventana_administrador {
 
-    public static usuarios usuario;
+    public static loginObjetos usuario;
 
     public ventana_administrador() {
     }
@@ -25,7 +26,6 @@ public class ventana_administrador {
     public void IniciarLogin(JLabel texto, JLabel fecha) {
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        texto.setText(texto.getText() + " " + usuario.getNombre());
         fecha.setText(fecha.getText() + " " + dateFormat.format(date));
 
     }

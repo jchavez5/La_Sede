@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import objetos.usuarios;
+import objetos.loginObjetos;
 /**
  *
  * @author User
@@ -28,17 +28,13 @@ public void realizaConexion(){
         System.out.println("Ocurrio un error : "+e.getMessage());
         }
 }
-public usuarios  logiarce(String user,String pass){
-    usuarios devolver;
+public loginObjetos logiarce(String user,String pass){
+    loginObjetos devolver;
     try {
         Statement stmt = conn.createStatement(); 
         ResultSet rs = stmt.executeQuery("SELECT * from buscar_usuario('"+user+"','"+pass+"');");
         if(rs.next() && rs.getObject(1)!=null){
-            devolver = new usuarios(rs.getInt(1),
-                rs.getString(2), rs.getString(3), 
-                rs.getInt(4), rs.getInt(5), 
-                rs.getString(6), rs.getString(7),
-                rs.getString(8), rs.getBoolean(9));
+            devolver = new loginObjetos(rs.getString(1),rs.getString(2),rs.getBoolean(3));
             return devolver;
         }
     } catch (SQLException ex) {
