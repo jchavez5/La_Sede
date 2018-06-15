@@ -75,7 +75,6 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         Fecha = new javax.swing.JLabel();
         MostarAdm = new javax.swing.JDesktopPane();
-        jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         bienvenido = new javax.swing.JLabel();
 
@@ -423,32 +422,17 @@ public class Ventana_Administrador extends javax.swing.JFrame {
         );
         MostarAdmLayout.setVerticalGroup(
             MostarAdmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 620, Short.MAX_VALUE)
         );
 
-        jPanel1.add(MostarAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 1080, 600));
-
-        jPanel3.setBackground(new java.awt.Color(117, 117, 117));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1300, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 16, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 640, 1300, -1));
+        jPanel1.add(MostarAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 1080, 620));
 
         jPanel4.setBackground(new java.awt.Color(207, 216, 220));
 
         bienvenido.setBackground(new java.awt.Color(204, 204, 204));
         bienvenido.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
         bienvenido.setForeground(new java.awt.Color(0, 0, 0));
-        bienvenido.setText(":");
+        bienvenido.setText(".");
         bienvenido.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 bienvenidoMousePressed(evt);
@@ -461,7 +445,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(bienvenido)
-                .addGap(0, 215, Short.MAX_VALUE))
+                .addGap(0, 216, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -471,7 +455,7 @@ public class Ventana_Administrador extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 220, 50));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 610, 220, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -496,9 +480,13 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_NameTittleMousePressed
 
     private void jLabel14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MousePressed
-    Salir  salir =new Salir();
-    salir.setVisible(true);
-    this.setVisible(false);
+//    Salir  salir =new Salir();
+//    salir.setVisible(true);
+//    this.setVisible(false);
+if (c.confirmarMensajeSalida()==true) {
+            c.cerrar();
+        }
+
     }//GEN-LAST:event_jLabel14MousePressed
 
     private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
@@ -726,7 +714,6 @@ public class Ventana_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblAlquilerAdm1;
     private javax.swing.JLabel lblCrearAdm;

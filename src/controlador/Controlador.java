@@ -9,6 +9,7 @@ import vista.RegistroEmpleado;
 import java.awt.Color;
 import java.beans.PropertyVetoException;
 import java.security.cert.Extension;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
@@ -125,7 +126,7 @@ public class Controlador {
     }
 
     public void efectoQuitarColorbottonloginN(JButton panelPrincipal) {
-        panelPrincipal.setBackground(new Color(207, 216, 220));
+        panelPrincipal.setBackground(new Color(255,82,82));
     }
 
     public void efectoQuitarColorbottonloginn(JButton panelPrincipal) {
@@ -172,7 +173,31 @@ public  void setiarCaja(JTextField[] txt ){
             txt[i].setText("");
             }
          }
- 
+ //mensaje de validaciones
+public boolean confirmarMensaje(){
+        ImageIcon icon = new ImageIcon("src/imagenes/Add New_32px.png");
+	int input = JOptionPane.showConfirmDialog(null, "Desea crear un nuevo registro?", "CONFIRMACION.",
+		JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, icon);
+
+        // 0=yes, 1=no, 2=cancel
+	System.out.println(input);
+      if (input==0) {
+        return true;
+    }
+      return false;
+}
+public boolean confirmarMensajeSalida(){
+        ImageIcon icon = new ImageIcon("src/imagenes/Close Window_48px.png");
+	int input = JOptionPane.showConfirmDialog(null, "Desea salir de la aplicacion?", "CONFIRMACION.",
+		JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, icon);
+
+        // 0=yes, 1=no, 2=cancel
+	System.out.println(input);
+      if (input==0) {
+        return true;
+    }
+      return false;
+}
 
 
     
