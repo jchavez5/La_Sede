@@ -7,6 +7,7 @@ package vista;
 import controlador.Controlador;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import objetos.usuarios;
 
 /**
  *
@@ -554,7 +555,14 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this, "Faltan campos por llenar...");
         }else{
         c.GenerarLogin(txtCedula, txtUsuario,txtClave);
-        PUsuario.setVisible(true); 
+        PUsuario.setVisible(true);
+            usuarios auxusu= new usuarios(0, txtNombre.getText().toString(), txtCedula.getText().toString(), 
+                    txtTelefono.getText().toString(), Integer.parseInt(txtCedula.getText().toString()),
+                    2, txtCorreo.getText().toString());
+        modelo.registro_empleado p= new modelo.registro_empleado();
+        p.realizaConexion();
+        p.guardar_empleado(auxusu, controlador.ventana_administrador.usuario, txtClave.getText().toString());
+        JOptionPane.showConfirmDialog(this, "guardado");
         }       
   
     }//GEN-LAST:event_lblGuardarMouseClicked
@@ -563,7 +571,7 @@ public class RegistroEmpleado extends javax.swing.JInternalFrame {
         if (c.confirmarMensaje()==true) {
         c.setiarCaja(new JTextField[]{txtNombre,txtCedula,txtApellido,txtCorreo,txtTelefono});
         txtNombre.requestFocus();        
-        PUsuario.setVisible(false); 
+        PUsuario.setVisible(false);
         }
         
     }//GEN-LAST:event_lblNuevoMouseClicked
